@@ -1,0 +1,126 @@
+\documentclass[12pt]{article}
+
+% ------------ Packages ------------
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{indentfirst}
+\usepackage{mathpazo}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{hypernat}
+\usepackage{listings}
+\usepackage{color}
+% ------------------------------------
+
+% ------------ Settings ------------
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhf{}
+\fancyfoot[L]{\thepage}
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+% ------------ Code ------------
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+% ------------------------------------
+% ------------------------------------
+
+% ------------ Commands ------------
+\renewcommand{\contentsname}{Índice}
+
+\renewcommand{\abstractname}{
+    \large \textbf{Introducción}
+    }
+
+\renewcommand{\headrulewidth}{0pt}
+% ------------------------------------
+
+\begin{document}
+% ------------ Presentacion ------------
+\begin{titlepage}
+    \begin{center} 
+    \includegraphics[width=3cm]{img/Bandera_Cujae.jpg}  %Logo CUJAE
+    
+    \vspace*{0.2cm}
+    \large \textbf{Universidad Tecnólgica de La Habana "José Antonio Echeverría"}   %Nombre de la Universidad
+    
+    \vspace*{0.1cm}
+    \large \textbf{Facultad de Ingeniería Informática}  %Facultad 														% Horizontal line
+    \vfill
+    \hrule
+    \vspace*{0.7cm}
+    \Large TÍTULO DEL INFORME
+    
+    \vspace*{0.5cm}
+    \begin{table}[h]
+        \begin{center}
+        \begin{tabular}{ll}
+            \large \textbf{Asignatura:} & Nombre de la asignatura\\
+                                        &\\
+            \large \textbf{Profesor:}   & Nombre del profesor\\
+                                        &\\                                                      
+            \large \textbf{Autor:}    & Nombre (\href{correo@ceis.cujae.edu.cu}{correo@ceis.cujae.edu.cu})                                   
+        \end{tabular}
+        \end{center}
+        \end{table} 
+    
+    \hrule 
+    \vfill
+    \vspace*{3.2cm}
+    \large Provincia, Cuba 
+
+    \vspace*{0.1cm}
+    \large Mes, Año
+    \end{center}
+    \end{titlepage}
+% ------------------------------------
+
+% ------------ Introduccion ------------
+    \pagenumbering{roman}
+    \section{Introducción}
+    \newpage
+% ------------------------------------
+
+% ------------ Indice ------------
+    \pagenumbering{gobble}
+    \tableofcontents
+    \newpage
+% ------------------------------------
+
+% ------------ Desarrollo ------------
+    \pagenumbering{arabic}
+        % Contenido aqui
+    \newpage
+% ------------------------------------
+
+% ------------ Conclusiones ------------
+    \pagenumbering{gobble}
+    \section{Conclusiones}
+        % Contenido aqui
+% ------------------------------------    
+\end{document}
